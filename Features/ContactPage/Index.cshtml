@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+<h2>@ViewData["Title"].</h2>
+
+<div id="contact">
+  <form v-on:submit.prevent="send">
+    <div v-if="errorMessage.length" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+    <div :class="{ 'form-group': true, 'has-error': errors.has('name'), 'has-success': name.length && !errors.has('name') }">
+      <label for="name">Name</label>
+      <input autofocus v-model="name" v-validate="'required|min:5'" class="form-control" name="name" type="text" />
+      <span v-show="errors.has('name')" class="text-danger">{{ errors.first('name') }}</span>
+    </div>
+    <div :class="{ 'form-group': true, 'has-danger': errors.has('email'), 'has-success': email.length && !errors.has('email') }">
+      <label for="email">E-mail</label>
+      <input v-model="email" v-validate="'required|email'" class="form-control" name="email" type="text" />
+      <span v-show="errors.has('email')" class="text-danger">{{ errors.first('email') }}</span>
+    </div>
+    <div :class="{ 'form-group': true, 'has-danger': errors.has('message'), 'has-success': message.length && !errors.has('message') }">
+      <label for="message">Message</label>
+      <textarea v-model="message" v-validate="'required|min:5'" class="form-control" name="message"></textarea>
+      <span v-show="errors.has('message')" class="text-danger">{{ errors.first('message') }}</span>
+    </div>
+    <input type="submit" value="Save" class="btn btn-primary" />
+  </form>
+</div>

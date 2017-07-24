@@ -1,0 +1,8 @@
+C:\Work\Projects\DotnetVueMvc\bin\Debug\netcoreapp1.1\DotnetVueMvc.deps.json
+C:\Work\Projects\DotnetVueMvc\bin\Debug\netcoreapp1.1\DotnetVueMvc.runtimeconfig.json
+C:\Work\Projects\DotnetVueMvc\bin\Debug\netcoreapp1.1\DotnetVueMvc.runtimeconfig.dev.json
+C:\Work\Projects\DotnetVueMvc\bin\Debug\netcoreapp1.1\DotnetVueMvc.dll
+C:\Work\Projects\DotnetVueMvc\bin\Debug\netcoreapp1.1\DotnetVueMvc.pdb
+C:\Work\Projects\DotnetVueMvc\obj\Debug\netcoreapp1.1\DotnetVueMvc.AssemblyInfo.cs
+C:\Work\Projects\DotnetVueMvc\obj\Debug\netcoreapp1.1\DotnetVueMvc.dll
+C:\Work\Projects\DotnetVueMvc\obj\Debug\netcoreapp1.1\DotnetVueMvc.pdb

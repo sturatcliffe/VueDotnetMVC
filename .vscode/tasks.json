@@ -1,0 +1,31 @@
+{
+    "version": "0.1.0",
+    "command": "dotnet",
+    "isShellCommand": true,
+    "args": [],
+    "tasks": [
+        {
+            "taskName": "build",
+            "args": [
+                "${workspaceRoot}/DotnetVueMvc.csproj"
+            ],
+            "isBuildCommand": true,
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "taskName": "bundle"
+        },
+        {
+            "taskName": "clean",
+            "args": [ "bundle", "clean" ],
+            "suppressTaskName": true
+        },
+        {
+            "taskName": "watch",
+            "args": [ "bundle", "watch" ],
+            "suppressTaskName": true,
+            "isWatching": true
+        }
+
+    ]
+}

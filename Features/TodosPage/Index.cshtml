@@ -1,0 +1,21 @@
+﻿@model DotnetVueMvc.Features.TodosPage.Model
+@{
+    ViewData["Title"] = "Todos";
+}
+<h2>@ViewData["Title"].</h2>
+
+<div id="todos">
+  <input v-model="newTodo" class="form-control" placeholder="New todo...press enter to store..." v-on:keydown.enter="addTodo" />
+
+  <ul class="todos-list">
+    <li v-for="todo, index in todos" v-on:click="removeTodo(index)">{{ todo }}</li>
+  </ul>
+
+  <button class="btn btn-primary" v-on:click="save">Save</button>
+</div>
+
+<input id="todos" type="hidden" value="@Html.Raw(Model.Todos)" />
+
+<script>
+  window.todos = @Html.Raw(Model.Todos);
+</script>
